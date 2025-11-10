@@ -1094,8 +1094,8 @@ public:
 				bool resource = true;
 				LPCTSTR name = NULL;
 				const tjs_char *sep;
-				if      ((sep = wcschr(str, '|')) != NULL) name = sep+1;
-				else if ((sep = wcschr(str, '?')) != NULL) {
+				if      ((sep = TJS_strchr(str, '|')) != NULL) name = sep+1;
+				else if ((sep = TJS_strchr(str, '?')) != NULL) {
 					tjs_int num = TJS_atoi(sep+1);
 					name = MAKEINTRESOURCE(num);
 				} else {
